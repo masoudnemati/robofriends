@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import CardList from "./CardList";
 import SearchBox from "./SearchBox";
 import { Robots } from "./robots";
-import scroll from "./scroll";
-import "./css/style.css";
 
 const App = () => {
   const [robots, setRobots] = useState(Robots);
@@ -18,11 +16,9 @@ const App = () => {
   });
   return (
     <div className="tc">
-      <h1 className="f1">RoboFriends</h1>
+      <h1>RoboFriends</h1>
       <SearchBox searchfield={searchfield} searchChange={onSearchChange} />
-      <scroll>
-        <CardList robots={filteredRobots} />
-      </scroll>
+      <CardList robots={filteredRobots} />
     </div>
   );
 };
